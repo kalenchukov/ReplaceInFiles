@@ -88,6 +88,7 @@ public class Replacement implements Replaceable
 	 * @see Replaceable#canHidden(boolean)
 	 */
 	@NotNull
+	@Override
 	public Replacement canHidden(final boolean canHidden)
 	{
 		this.fileExpert.canHidden(canHidden);

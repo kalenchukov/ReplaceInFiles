@@ -30,7 +30,7 @@ public interface Replaceable
 	/**
 	 * Распространение действия на скрытые файлы.
 	 *
-	 * @param canHidden {@code true}, если действие на скрытые файлы необходимо, иначе {@code false}.
+	 * @param canHidden {@code True}, если действие на скрытые файлы необходимо, иначе {@code false}.
 	 * @return Ссылку на данный объект.
 	 */
 	@NotNull

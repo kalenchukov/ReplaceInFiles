@@ -21,7 +21,7 @@ public interface Replaceable
 	/**
 	 * Устанавливает локализацию.
 	 *
-	 * @param locale Локаль.
+	 * @param locale Локализация.
 	 * @return Ссылку на данный объект.
 	 */
 	@NotNull

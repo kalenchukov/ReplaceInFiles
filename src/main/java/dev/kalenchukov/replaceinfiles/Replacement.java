@@ -21,7 +21,6 @@ public class Replacement implements Replaceable
 {
 	/**
 	 * Локаль.
-	 * Для изменения локали необходимо использовать {@link #setLocale(Locale)}.
 	 */
 	@NotNull
 	private Locale locale = new Locale("ru", "RU");

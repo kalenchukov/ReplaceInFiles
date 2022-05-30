@@ -32,13 +32,13 @@ public class Replacement implements Replaceable
 	private static final Logger LOG = Logger.getLogger(Replacement.class);
 
 	/**
-	 * Устанавливает тексты локализации для текстов логирования.
+	 * Локализованные тексты логирования.
 	 */
 	@NotNull
 	private ResourceBundle localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
 
 	/**
-	 * Устанавливает тексты локализации для текстов исключений.
+	 * Локализованные тексты исключений.
 	 */
 	@NotNull
 	private ResourceBundle localeExceptions = ResourceBundle.getBundle("localizations/exceptions", this.locale);

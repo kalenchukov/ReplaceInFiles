@@ -6,7 +6,6 @@
 
 package dev.kalenchukov.replaceinfiles.modules;
 
-import dev.kalenchukov.replaceinfiles.Replacement;
 import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,8 +18,7 @@ import java.util.*;
 public class FileExpert implements FileExperts
 {
 	/**
-	 * Локаль.
-	 * Для изменения локали необходимо использовать {@link #setLocale(Locale)}.
+	 * Локализация.
 	 */
 	@NotNull
 	private Locale locale = new Locale("ru", "RU");

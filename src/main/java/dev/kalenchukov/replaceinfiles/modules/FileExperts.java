@@ -20,7 +20,7 @@ public interface FileExperts
 	/**
 	 * Устанавливает локализацию.
 	 *
-	 * @param locale Локаль.
+	 * @param locale Локализация.
 	 * @return Ссылку на данный объект.
 	 */
 	@NotNull

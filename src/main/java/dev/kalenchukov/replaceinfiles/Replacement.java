@@ -20,7 +20,7 @@ import java.util.*;
 public class Replacement implements Replaceable
 {
 	/**
-	 * Локаль.
+	 * Локализация.
 	 */
 	@NotNull
 	private Locale locale = new Locale("ru", "RU");

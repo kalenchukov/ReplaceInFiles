@@ -24,7 +24,7 @@ public class FileExpert implements FileExperts
 	private Locale locale = new Locale("ru", "RU");
 
 	/**
-	 * Устанавливает логгер для данного класса.
+	 * Логгер для данного класса.
 	 */
 	@NotNull
 	private static final Logger LOG = Logger.getLogger(FileExpert.class);

@@ -26,7 +26,7 @@ public class Replacement implements Replaceable
 	private Locale locale = new Locale("ru", "RU");
 
 	/**
-	 * Устанавливает логгер для данного класса.
+	 * Логгер для данного класса.
 	 */
 	@NotNull
 	private static final Logger LOG = Logger.getLogger(Replacement.class);

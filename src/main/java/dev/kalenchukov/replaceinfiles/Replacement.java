@@ -35,13 +35,19 @@ public class Replacement implements Replaceable
 	 * Локализованные тексты логирования.
 	 */
 	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
+	private ResourceBundle localeLogs = ResourceBundle.getBundle(
+		"replaceinfiles/localizations/logs",
+		this.locale
+	);
 
 	/**
 	 * Локализованные тексты исключений.
 	 */
 	@NotNull
-	private ResourceBundle localeExceptions = ResourceBundle.getBundle("localizations/exceptions", this.locale);
+	private ResourceBundle localeExceptions = ResourceBundle.getBundle(
+		"replaceinfiles/localizations/exceptions",
+		this.locale
+	);
 
 	/**
 	 * Объект для работы с файлами.
@@ -74,8 +80,15 @@ public class Replacement implements Replaceable
 		{
 			this.locale = locale;
 
-			this.localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
-			this.localeExceptions = ResourceBundle.getBundle("localizations/exceptions", this.locale);
+			this.localeLogs = ResourceBundle.getBundle(
+				"replaceinfiles/localizations/logs",
+				this.locale
+			);
+
+			this.localeExceptions = ResourceBundle.getBundle(
+				"replaceinfiles/localizations/exceptions",
+				this.locale
+			);
 		}
 
 		this.fileExpert.setLocale(this.locale);

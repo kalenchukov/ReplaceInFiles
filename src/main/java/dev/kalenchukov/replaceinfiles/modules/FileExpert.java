@@ -33,13 +33,19 @@ public class FileExpert implements FileExperts
 	 * Локализованные тексты логирования.
 	 */
 	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
+	private ResourceBundle localeLogs = ResourceBundle.getBundle(
+		"replaceinfiles/localizations/logs",
+		this.locale
+	);
 
 	/**
 	 * Локализованные тексты исключений.
 	 */
 	@NotNull
-	private ResourceBundle localeExceptions = ResourceBundle.getBundle("localizations/exceptions", this.locale);
+	private ResourceBundle localeExceptions = ResourceBundle.getBundle(
+		"replaceinfiles/localizations/exceptions",
+		this.locale
+	);
 
 	/**
 	 * Распространение действия на скрытые файлы.
@@ -60,8 +66,15 @@ public class FileExpert implements FileExperts
 		{
 			this.locale = locale;
 
-			this.localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
-			this.localeExceptions = ResourceBundle.getBundle("localizations/exceptions", this.locale);
+			this.localeLogs = ResourceBundle.getBundle(
+				"replaceinfiles/localizations/logs",
+				this.locale
+			);
+
+			this.localeExceptions = ResourceBundle.getBundle(
+				"replaceinfiles/localizations/exceptions",
+				this.locale
+			);
 		}
 
 		return this;

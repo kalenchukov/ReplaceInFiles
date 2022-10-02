@@ -24,6 +24,7 @@
 
 package dev.kalenchukov.replaceinfiles;
 
+import dev.kalenchukov.notation.converting.NotationConverter;
 import dev.kalenchukov.replaceinfiles.modules.FileExpert;
 import dev.kalenchukov.replaceinfiles.resources.SpecialRule;
 import org.apache.log4j.Logger;
@@ -31,6 +32,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Класс замены символов в файлах.
@@ -197,12 +200,16 @@ public class Replacement implements Replaceable
 	@Override
 	public void replace()
 	{
+		FileExpert fileText = new FileExpert().setLocale(this.locale);
+		String valueText = fileText.readFile(new File("/home/sadmin/Projects/methods.conf"));
+
 		for (File file : this.files)
 		{
 			String value = this.fileExpert.readFile(file);
 
 			for (Map.Entry<String, String> replace : this.replacing.entrySet())
 			{
+
 				String replacement = replace.getValue();
 
 				if (replace.getValue().equals(SpecialRule.FILE_NAME.getSpecialSign())) {
@@ -213,7 +220,20 @@ public class Replacement implements Replaceable
 					replacement = file.getPath();
 				}
 
-				value = value.replaceAll(replace.getKey(), replacement);
+				final Pattern pattern = Pattern.compile("(?<digit>7[0-9]{4})");
+				final Matcher matcher = pattern.matcher(value);
+
+				String group = "2343465677898798";
+
+				while (matcher.find()) {
+					group = matcher.group("digit");
+				}
+
+				System.out.println(group);
+
+				value = value.replaceAll(replace.getKey(), NotationConverter.toSnakeCase(replacement));
+				valueText = valueText.replaceAll(group, NotationConverter.toSnakeCase(replacement));
+
 			}
 
 			LOG.debug(String.format(
@@ -222,6 +242,7 @@ public class Replacement implements Replaceable
 			));
 
 			this.fileExpert.writeFile(file, value);
+			fileText.writeFile(new File("/home/sadmin/Projects/methods.conf"), valueText);
 		}
 	}
 }

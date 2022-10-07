@@ -22,4 +22,7 @@
  * SOFTWARE.
  */
 
+/**
+ * Предоставляет классы, необходимые для выполнения основных задач.
+ */
 package dev.kalenchukov.replaceinfiles.modules;

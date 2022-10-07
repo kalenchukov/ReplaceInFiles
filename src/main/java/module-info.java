@@ -1,3 +1,6 @@
+/**
+ * Определяет API для поиска и замены текста в файлах.
+ */
 module dev.kalenchukov.replaceinfiles
 {
 	requires org.jetbrains.annotations;

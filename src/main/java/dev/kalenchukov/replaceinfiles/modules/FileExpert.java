@@ -39,7 +39,24 @@ public class FileExpert implements FileExperts
 	 * Локализация.
 	 */
 	@NotNull
-	private Locale locale = new Locale("ru", "RU");
+	private Locale locale;
+
+	/**
+	 * Распространение действия на скрытые файлы.
+	 */
+	private Boolean canHidden;
+
+	/**
+	 * Локализованные тексты логирования.
+	 */
+	@NotNull
+	private ResourceBundle localeLogs;
+
+	/**
+	 * Локализованные тексты исключений.
+	 */
+	@NotNull
+	private ResourceBundle localeExceptions;
 
 	/**
 	 * Логгер для данного класса.
@@ -48,28 +65,21 @@ public class FileExpert implements FileExperts
 	private static final Logger LOG = Logger.getLogger(FileExpert.class);
 
 	/**
-	 * Локализованные тексты логирования.
+	 * Конструктор для {@code FileExpert}.
 	 */
-	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle(
-		"replaceinfiles/localizations/logs",
-		this.locale
-	);
-
-	/**
-	 * Локализованные тексты исключений.
-	 */
-	@NotNull
-	private ResourceBundle localeExceptions = ResourceBundle.getBundle(
-		"replaceinfiles/localizations/exceptions",
-		this.locale
-	);
-
-	/**
-	 * Распространение действия на скрытые файлы.
-	 */
-	private boolean canHidden = false;
-
+	public FileExpert()
+	{
+		this.locale = new Locale("ru", "RU");
+		this.canHidden = false;
+		this.localeLogs = ResourceBundle.getBundle(
+			"replaceinfiles/localizations/logs",
+			this.locale
+		);
+		this.localeExceptions = ResourceBundle.getBundle(
+			"replaceinfiles/localizations/exceptions",
+			this.locale
+		);
+	}
 
 	/**
 	 * @see FileExpert#setLocale(Locale)

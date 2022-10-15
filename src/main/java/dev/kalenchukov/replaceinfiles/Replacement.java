@@ -41,7 +41,37 @@ public class Replacement implements Replaceable
 	 * Локализация.
 	 */
 	@NotNull
-	private Locale locale = new Locale("ru", "RU");
+	private Locale locale;
+
+	/**
+	 * Объект для работы с файлами.
+	 */
+	@NotNull
+	private final FileExpert fileExpert;
+
+	/**
+	 * Коллекция файлов для замены.
+	 */
+	@NotNull
+	private final List<@NotNull File> files;
+
+	/**
+	 * Коллекция правил замены.
+	 */
+	@NotNull
+	private final Map<@NotNull String, @NotNull String> replacing;
+
+	/**
+	 * Локализованные тексты логирования.
+	 */
+	@NotNull
+	private ResourceBundle localeLogs;
+
+	/**
+	 * Локализованные тексты исключений.
+	 */
+	@NotNull
+	private ResourceBundle localeExceptions;
 
 	/**
 	 * Логгер для данного класса.
@@ -50,40 +80,23 @@ public class Replacement implements Replaceable
 	private static final Logger LOG = Logger.getLogger(Replacement.class);
 
 	/**
-	 * Локализованные тексты логирования.
+	 * Конструктор для {@code Replacement}.
 	 */
-	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle(
-		"replaceinfiles/localizations/logs",
-		this.locale
-	);
-
-	/**
-	 * Локализованные тексты исключений.
-	 */
-	@NotNull
-	private ResourceBundle localeExceptions = ResourceBundle.getBundle(
-		"replaceinfiles/localizations/exceptions",
-		this.locale
-	);
-
-	/**
-	 * Объект для работы с файлами.
-	 */
-	@NotNull
-	private final FileExpert fileExpert = new FileExpert().setLocale(this.locale);
-
-	/**
-	 * Коллекция файлов для замены.
-	 */
-	@NotNull
-	private final List<@NotNull File> files = new ArrayList<>();
-
-	/**
-	 * Коллекция правил замены.
-	 */
-	@NotNull
-	private final Map<@NotNull String, @NotNull String> replacing = new LinkedHashMap<>();
+	public Replacement()
+	{
+		this.locale = new Locale("ru", "RU");
+		this.fileExpert = new FileExpert().setLocale(this.locale);
+		this.files = new ArrayList<>();
+		this.replacing = new LinkedHashMap<>();
+		this.localeLogs = ResourceBundle.getBundle(
+			"replaceinfiles/localizations/logs",
+			this.locale
+		);
+		this.localeExceptions = ResourceBundle.getBundle(
+			"replaceinfiles/localizations/exceptions",
+			this.locale
+		);
+	}
 
 	/**
 	 * @see Replaceable#setLocale(Locale)

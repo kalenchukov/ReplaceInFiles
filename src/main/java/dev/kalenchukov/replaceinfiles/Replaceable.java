@@ -52,7 +52,7 @@ public interface Replaceable
 	 * @return Ссылку на данный объект.
 	 */
 	@NotNull
-	Replacement canHidden(final boolean canHidden);
+	Replacement canHidden(boolean canHidden);
 
 	/**
 	 * Добавляет файл в котором будет производиться замена.

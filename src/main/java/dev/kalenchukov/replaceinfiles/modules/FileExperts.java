@@ -58,7 +58,7 @@ public interface FileExperts
 	 * @return Ссылку на данный объект.
 	 */
 	@NotNull
-	FileExperts canHidden(final boolean canHidden);
+	FileExperts canHidden(boolean canHidden);
 
 	/**
 	 * Записывает файл.
@@ -66,7 +66,7 @@ public interface FileExperts
 	 * @param file Файл.
 	 * @param value Строка которую необходимо записать в файл.
 	 */
-	void writeFile(@NotNull final File file, @NotNull final String value);
+	void writeFile(@NotNull File file, @NotNull String value);
 
 	/**
 	 * Считывает файл.
@@ -75,14 +75,14 @@ public interface FileExperts
 	 * @return Содержимое файла в виде строки.
 	 */
 	@NotNull
-	String readFile(@NotNull final File file);
+	String readFile(@NotNull File file);
 
 	/**
 	 * Очищает файл.
 	 *
 	 * @param file Файл.
 	 */
-	void cleanFile(@NotNull final File file);
+	void cleanFile(@NotNull File file);
 
 	/**
 	 * Сканирует директорию на наличие файлов.
@@ -91,5 +91,5 @@ public interface FileExperts
 	 * @return Коллекцию файлов из указанной директории.
 	 */
 	@NotNull
-	List<File> scanDirectory(@NotNull final File directory);
+	List<@NotNull File> scanDirectory(@NotNull File directory);
 }

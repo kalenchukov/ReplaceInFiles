@@ -48,11 +48,3 @@ replacement.replace();
 Содержимое файла 'myfile.txt' после замены:
 
 > myfile.txt в /home/login/Project/myfile.txt.
-
-## Версии
-
-Доступные [версии](https://github.com/kalenchukov/ReplaceInFiles/releases).
-
-## Лицензия
-
-[MIT](https://opensource.org/licenses/MIT)

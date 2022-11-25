@@ -49,14 +49,6 @@ replacement.replace();
 
 > myfile.txt в /home/login/Project/myfile.txt.
 
-## Установка
-
-Для установки этого проекта, введите в терминале:
-
-```bash
-git clone https://github.com/kalenchukov/ReplaceInFiles.git
-```
-
 ## Версии
 
 Доступные [версии](https://github.com/kalenchukov/ReplaceInFiles/releases).

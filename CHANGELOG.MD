@@ -3,12 +3,15 @@
 ## vX.X.X - XX.XX.XXXX
 
 ### Добавлено
-*
+* Добавлен AUTHOR.MD.
+* Добавлен INSTALL.MD.
+* Добавлен CHANGELOG.MD.
 
 ### Изменено
 * Выставлена печать логов уровня INFO.
 * Убран модификатор final в классе FileExperts.
 * Убран модификатор final в классе Replaceable.
+* Обновлён README.MD.
 
 ### Исправлено
 *

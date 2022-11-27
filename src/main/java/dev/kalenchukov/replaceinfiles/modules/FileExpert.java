@@ -72,11 +72,11 @@ public class FileExpert implements FileExperts
 		this.locale = new Locale("ru", "RU");
 		this.canHidden = false;
 		this.localeLogs = ResourceBundle.getBundle(
-			"replaceinfiles/localizations/logs",
+			"/replaceinfiles/localizations/logs",
 			this.locale
 		);
 		this.localeExceptions = ResourceBundle.getBundle(
-			"replaceinfiles/localizations/exceptions",
+			"/replaceinfiles/localizations/exceptions",
 			this.locale
 		);
 	}
@@ -95,12 +95,12 @@ public class FileExpert implements FileExperts
 			this.locale = locale;
 
 			this.localeLogs = ResourceBundle.getBundle(
-				"replaceinfiles/localizations/logs",
+				"/replaceinfiles/localizations/logs",
 				this.locale
 			);
 
 			this.localeExceptions = ResourceBundle.getBundle(
-				"replaceinfiles/localizations/exceptions",
+				"/replaceinfiles/localizations/exceptions",
 				this.locale
 			);
 		}

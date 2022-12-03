@@ -39,8 +39,8 @@ public interface Replaceable
 	/**
 	 * Устанавливает локализацию.
 	 *
-	 * @param locale Локализация.
-	 * @return Ссылку на данный объект.
+	 * @param locale локализация.
+	 * @return ссылку на данный объект.
 	 */
 	@NotNull
 	Replacement setLocale(@NotNull Locale locale);
@@ -48,8 +48,8 @@ public interface Replaceable
 	/**
 	 * Распространение действия на скрытые файлы.
 	 *
-	 * @param canHidden {@code True}, если действие на скрытые файлы необходимо, иначе {@code false}.
-	 * @return Ссылку на данный объект.
+	 * @param canHidden {@code true}, если действие на скрытые файлы необходимо, иначе {@code false}.
+	 * @return ссылку на данный объект.
 	 */
 	@NotNull
 	Replacement canHidden(boolean canHidden);
@@ -57,9 +57,9 @@ public interface Replaceable
 	/**
 	 * Добавляет файл в котором будет производиться замена.
 	 *
-	 * @param file Файл.
-	 * @return Ссылку на данный объект.
-	 * @throws FileNotFoundException Если файла не существует.
+	 * @param file файл.
+	 * @return ссылку на данный объект.
+	 * @throws FileNotFoundException если файла не существует.
 	 */
 	@NotNull
 	Replacement addFile(@NotNull File file) throws FileNotFoundException;
@@ -67,9 +67,9 @@ public interface Replaceable
 	/**
 	 * Применяет правило для замены с указанием строки замены.
 	 *
-	 * @param regexp Шаблон регулярного выражения.
-	 * @param replacement Строка замены.
-	 * @return Ссылку на данный объект.
+	 * @param regexp шаблон регулярного выражения.
+	 * @param replacement строка замены.
+	 * @return ссылку на данный объект.
 	 */
 	@NotNull
 	Replaceable apply(@NotNull String regexp, @NotNull String replacement);
@@ -77,9 +77,9 @@ public interface Replaceable
 	/**
 	 * Применяет правило для замены с указанием специального правила.
 	 *
-	 * @param regexp Шаблон регулярного выражения.
-	 * @param specialRule Специальное правило.
-	 * @return Ссылку на данный объект.
+	 * @param regexp шаблон регулярного выражения.
+	 * @param specialRule специальное правило.
+	 * @return ссылку на данный объект.
 	 */
 	@NotNull
 	Replaceable apply(@NotNull String regexp, @NotNull SpecialRule specialRule);

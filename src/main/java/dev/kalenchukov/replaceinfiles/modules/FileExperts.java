@@ -38,8 +38,8 @@ public interface FileExperts
 	/**
 	 * Устанавливает локализацию.
 	 *
-	 * @param locale Локализация.
-	 * @return Ссылку на данный объект.
+	 * @param locale локализация.
+	 * @return ссылку на данный объект.
 	 */
 	@NotNull
 	FileExperts setLocale(@NotNull Locale locale);
@@ -47,15 +47,15 @@ public interface FileExperts
 	/**
 	 * Возвращает установленное распространение действия на скрытые файлы.
 	 *
-	 * @return {@code True}, если действие на скрытые файлы распространяется, иначе {@code false}.
+	 * @return {@code true}, если действие на скрытые файлы распространяется, иначе {@code false}.
 	 */
 	boolean canHidden();
 
 	/**
 	 * Устанавливает распространение действия на скрытые файлы.
 	 *
-	 * @param canHidden {@code True}, если действие на скрытые файлы необходимо, иначе {@code false}.
-	 * @return Ссылку на данный объект.
+	 * @param canHidden {@code true}, если действие на скрытые файлы необходимо, иначе {@code false}.
+	 * @return ссылку на данный объект.
 	 */
 	@NotNull
 	FileExperts canHidden(boolean canHidden);
@@ -63,16 +63,16 @@ public interface FileExperts
 	/**
 	 * Записывает файл.
 	 *
-	 * @param file Файл.
-	 * @param value Строка которую необходимо записать в файл.
+	 * @param file файл.
+	 * @param value строка которую необходимо записать в файл.
 	 */
 	void writeFile(@NotNull File file, @NotNull String value);
 
 	/**
 	 * Считывает файл.
 	 *
-	 * @param file Файл.
-	 * @return Содержимое файла в виде строки.
+	 * @param file файл.
+	 * @return содержимое файла в виде строки.
 	 */
 	@NotNull
 	String readFile(@NotNull File file);
@@ -80,15 +80,15 @@ public interface FileExperts
 	/**
 	 * Очищает файл.
 	 *
-	 * @param file Файл.
+	 * @param file файл.
 	 */
 	void cleanFile(@NotNull File file);
 
 	/**
 	 * Сканирует директорию на наличие файлов.
 	 *
-	 * @param directory Директория.
-	 * @return Коллекцию файлов из указанной директории.
+	 * @param directory директория.
+	 * @return коллекцию файлов из указанной директории.
 	 */
 	@NotNull
 	List<@NotNull File> scanDirectory(@NotNull File directory);

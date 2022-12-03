@@ -89,11 +89,11 @@ public class Replacement implements Replaceable
 		this.files = new ArrayList<>();
 		this.replacing = new LinkedHashMap<>();
 		this.localeLogs = ResourceBundle.getBundle(
-			"/replaceinfiles/localizations/logs",
+			"replaceinfiles/localizations/logs",
 			this.locale
 		);
 		this.localeExceptions = ResourceBundle.getBundle(
-			"/replaceinfiles/localizations/exceptions",
+			"replaceinfiles/localizations/exceptions",
 			this.locale
 		);
 	}
@@ -112,12 +112,12 @@ public class Replacement implements Replaceable
 			this.locale = locale;
 
 			this.localeLogs = ResourceBundle.getBundle(
-				"/replaceinfiles/localizations/logs",
+				"replaceinfiles/localizations/logs",
 				this.locale
 			);
 
 			this.localeExceptions = ResourceBundle.getBundle(
-				"/replaceinfiles/localizations/exceptions",
+				"replaceinfiles/localizations/exceptions",
 				this.locale
 			);
 		}

@@ -7,7 +7,6 @@
 > Текст в файле.
 
 Использование заменителя:
-
 ```java
 Replaceable replacement = new Replacement();
 replacement.addFile(new File("/home/login/Project/myfile.txt"));
@@ -32,7 +31,6 @@ replacement.replace();
 > Текст в файле.
 
 Использование заменителя:
-
 ```java
 Replaceable replacement = new Replacement();
 replacement.addFile(new File("/home/login/Project/myfile.txt"));

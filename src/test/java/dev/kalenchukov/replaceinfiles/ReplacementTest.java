@@ -24,87 +24,107 @@
 
 package dev.kalenchukov.replaceinfiles;
 
-import dev.kalenchukov.replaceinfiles.modules.FileExpert;
-import dev.kalenchukov.replaceinfiles.modules.FileExperts;
 import dev.kalenchukov.replaceinfiles.resources.SpecialRule;
-import org.junit.*;
-import org.junit.rules.TemporaryFolder;
 
-import java.io.File;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.io.TempDir;
 
-import static org.junit.Assert.*;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Класс проверки методов класса {@link Replacement}.
+ */
 public class ReplacementTest
 {
-	@ClassRule
-	public static TemporaryFolder tempDir = new TemporaryFolder();
+	public static final String TEMP_FILE_NAME = "tempFile";
 
-	public static FileExperts fileExpert = new FileExpert();
+	public static File tempFile;
 
-	public static File file;
+	public static Replaceable replacement;
 
-	public static  Replaceable replacement;
-
-	@BeforeClass
-	public static void beforeClass() throws Exception
+	@BeforeAll
+	public static void beforeAll(@TempDir File tempDir)
 	{
-		file = tempDir.newFile("myfile.txt");
+		tempFile = new File(tempDir, TEMP_FILE_NAME);
 	}
 
-	@Before
-	public void setUp() throws Exception
+	@BeforeEach
+	public void beforeEach() throws Exception
 	{
+		ReplacementTest.writeFile("text");
+
 		replacement = new Replacement();
-		replacement.addFile(file);
-
-		fileExpert.writeFile(file, "text");
+		replacement.addFile(tempFile);
 	}
 
+	/**
+	 * Проверка метода {@link Replacement#apply(String, String)}.
+	 */
 	@Test
-	public void testReplace1()
-	{
-		replacement.apply("text", SpecialRule.FILE_NAME)
-				   .replace();
-
-		assertEquals("myfile.txt", fileExpert.readFile(file));
-	}
-
-	@Test
-	public void testReplace2()
-	{
-		replacement.apply("text", SpecialRule.PATH)
-				   .replace();
-
-		assertEquals(file.getPath(), fileExpert.readFile(file));
-	}
-
-	@Test
-	public void testReplace3()
+	public void testReplaceString()
 	{
 		replacement.apply("text", "string")
 				   .replace();
 
-		assertEquals("string", fileExpert.readFile(file));
+		assertEquals("string", ReplacementTest.readFile());
 	}
 
+	/**
+	 * Проверка метода {@link Replacement#apply(String, SpecialRule)} со специальным
+	 * правилом {@link SpecialRule#FILE_NAME}.
+	 */
 	@Test
-	public void testReplace4()
+	public void testReplaceSpecialRuleFileName()
 	{
-		replacement.apply("x", "X")
+		replacement.apply("text", SpecialRule.FILE_NAME)
 				   .replace();
 
-		assertEquals("teXt", fileExpert.readFile(file));
+		assertEquals(TEMP_FILE_NAME, ReplacementTest.readFile());
 	}
 
-	@After
-	public void tearDown() throws Exception
+	/**
+	 * Проверка метода {@link Replacement#apply(String, SpecialRule)} со специальным
+	 * правилом {@link SpecialRule#PATH}.
+	 */
+	@Test
+	public void testReplaceSpecialRulePath()
 	{
-		fileExpert.cleanFile(file);
+		replacement.apply("text", SpecialRule.PATH)
+				   .replace();
+
+		assertEquals(tempFile.getPath(), ReplacementTest.readFile());
 	}
 
-	@AfterClass
-	public static void afterClass() throws Exception
+	private static String readFile()
 	{
-		tempDir.delete();
+		String value;
+		Path path = Paths.get(tempFile.toURI());
+
+		try {
+			value = Files.readAllLines(path, StandardCharsets.UTF_8).get(0);
+		}
+		catch (IOException exception) {
+			throw new RuntimeException(exception);
+		}
+
+		return value;
+	}
+
+	private static void writeFile(final String value)
+	{
+		Path path = Paths.get(tempFile.toURI());
+
+		try {
+			Files.write(path, value.getBytes());
+		}
+		catch (IOException exception) {
+			throw new RuntimeException(exception);
+		}
 	}
 }

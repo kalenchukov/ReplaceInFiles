@@ -49,7 +49,7 @@ public enum SpecialRule
 	/**
 	 * Конструктор для {@code SpecialRule}.
 	 *
-	 * @param specialSign специальный знак правила
+	 * @param specialSign специальный знак правила.
 	 */
 	SpecialRule(@NotNull final String specialSign)
 	{

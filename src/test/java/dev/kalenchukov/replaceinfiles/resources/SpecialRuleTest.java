@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Класс проверки констант и методов перечисления {@link SpecialRule}.
  */
-class SpecialRuleTest
+public class SpecialRuleTest
 {
 	/**
 	 * Проверка метода {@link SpecialRule#getSpecialSign()}.

@@ -82,7 +82,10 @@ public class FileExpert implements FileExperts
 	}
 
 	/**
-	 * @see FileExpert#setLocale(Locale)
+	 * {@inheritDoc}
+	 *
+	 * @param locale {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -109,7 +112,9 @@ public class FileExpert implements FileExperts
 	}
 
 	/**
-	 * @see FileExperts#canHidden()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean canHidden()
@@ -118,7 +123,10 @@ public class FileExpert implements FileExperts
 	}
 
 	/**
-	 * @see FileExperts#canHidden(boolean)
+	 * {@inheritDoc}
+	 *
+	 * @param canHidden {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	@NotNull
@@ -130,7 +138,10 @@ public class FileExpert implements FileExperts
 	}
 
 	/**
-	 * @see FileExperts#writeFile(File, String)
+	 * {@inheritDoc}
+	 *
+	 * @param file {@inheritDoc}
+	 * @param value {@inheritDoc}
 	 */
 	@Override
 	public void writeFile(@NotNull final File file, @NotNull final String value)
@@ -154,7 +165,10 @@ public class FileExpert implements FileExperts
 	}
 
 	/**
-	 * @see FileExperts#readFile(File)
+	 * {@inheritDoc}
+	 *
+	 * @param file {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	@NotNull
@@ -182,7 +196,9 @@ public class FileExpert implements FileExperts
 	}
 
 	/**
-	 * @see FileExperts#cleanFile(File)
+	 * {@inheritDoc}
+	 *
+	 * @param file {@inheritDoc}
 	 */
 	@Override
 	public void cleanFile(@NotNull final File file)
@@ -191,7 +207,10 @@ public class FileExpert implements FileExperts
 	}
 
 	/**
-	 * @see FileExperts#scanDirectory(File)
+	 * {@inheritDoc}
+	 *
+	 * @param directory {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	@NotNull

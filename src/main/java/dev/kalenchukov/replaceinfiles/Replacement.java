@@ -99,7 +99,10 @@ public class Replacement implements Replaceable
 	}
 
 	/**
-	 * @see Replaceable#setLocale(Locale)
+	 * {@inheritDoc}
+	 *
+	 * @param locale {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -128,7 +131,10 @@ public class Replacement implements Replaceable
 	}
 
 	/**
-	 * @see Replaceable#canHidden(boolean)
+	 * {@inheritDoc}
+	 *
+	 * @param canHidden {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -140,7 +146,11 @@ public class Replacement implements Replaceable
 	}
 
 	/**
-	 * @see Replaceable#addFile(File)
+	 * {@inheritDoc}
+	 *
+	 * @param file {@inheritDoc}
+	 * @return {@inheritDoc}
+	 * @throws FileNotFoundException {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -171,7 +181,11 @@ public class Replacement implements Replaceable
 	}
 
 	/**
-	 * @see Replaceable#apply(String, String)
+	 * {@inheritDoc}
+	 *
+	 * @param regexp {@inheritDoc}
+	 * @param replacement {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -192,7 +206,11 @@ public class Replacement implements Replaceable
 	}
 
 	/**
-	 * @see Replaceable#apply(String, SpecialRule)
+	 * {@inheritDoc}
+	 *
+	 * @param regexp {@inheritDoc}
+	 * @param specialRule {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -205,7 +223,7 @@ public class Replacement implements Replaceable
 	}
 
 	/**
-	 * @see Replaceable#replace()
+	 * {@inheritDoc}
 	 */
 	@Override
 	public void replace()

@@ -34,6 +34,8 @@ import java.util.*;
 
 /**
  * Класс замены символов в файлах.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class Replacement implements Replaceable
 {

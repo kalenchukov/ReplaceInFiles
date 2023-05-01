@@ -32,6 +32,8 @@ import java.util.*;
 
 /**
  * Класс работы с файлами.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class FileExpert implements FileExperts
 {

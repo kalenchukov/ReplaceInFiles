@@ -39,6 +39,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link Replacement}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class ReplacementTest
 {

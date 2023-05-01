@@ -32,6 +32,8 @@ import java.util.Locale;
 
 /**
  * Интерфейс для реализации работы с файлами.
+ *
+ * @author Aleksey Kalenchukov
  */
 public interface FileExperts
 {

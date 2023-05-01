@@ -33,6 +33,8 @@ import java.util.Locale;
 
 /**
  * Интерфейс для реализации замены символов в файлах.
+ *
+ * @author Aleksey Kalenchukov
  */
 public interface Replaceable
 {

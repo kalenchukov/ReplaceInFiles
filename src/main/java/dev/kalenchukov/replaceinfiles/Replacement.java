@@ -35,7 +35,7 @@ import java.util.*;
 /**
  * Класс замены символов в файлах.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class Replacement implements Replaceable
 {

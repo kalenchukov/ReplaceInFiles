@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Перечисление специальных правил замены.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public enum SpecialRule
 {

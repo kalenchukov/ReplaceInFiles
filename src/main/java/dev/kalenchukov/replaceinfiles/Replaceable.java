@@ -34,7 +34,7 @@ import java.util.Locale;
 /**
  * Интерфейс для реализации замены символов в файлах.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Replaceable
 {

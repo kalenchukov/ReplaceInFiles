@@ -33,7 +33,7 @@ import java.util.Locale;
 /**
  * Интерфейс для реализации работы с файлами.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface FileExperts
 {

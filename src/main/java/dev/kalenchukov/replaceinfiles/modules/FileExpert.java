@@ -24,7 +24,8 @@
 
 package dev.kalenchukov.replaceinfiles.modules;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
@@ -64,7 +65,7 @@ public class FileExpert implements FileExperts
 	 * Логгер для данного класса.
 	 */
 	@NotNull
-	private static final Logger LOG = Logger.getLogger(FileExpert.class);
+	private static final Logger LOG = LogManager.getLogger(FileExpert.class);
 
 	/**
 	 * Конструктор для {@code FileExpert}.

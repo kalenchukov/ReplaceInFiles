@@ -26,7 +26,8 @@ package dev.kalenchukov.replaceinfiles;
 
 import dev.kalenchukov.replaceinfiles.modules.FileExpert;
 import dev.kalenchukov.replaceinfiles.resources.SpecialRule;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
@@ -79,7 +80,7 @@ public class Replacement implements Replaceable
 	 * Логгер для данного класса.
 	 */
 	@NotNull
-	private static final Logger LOG = Logger.getLogger(Replacement.class);
+	private static final Logger LOG = LogManager.getLogger(Replacement.class);
 
 	/**
 	 * Конструктор для {@code Replacement}.

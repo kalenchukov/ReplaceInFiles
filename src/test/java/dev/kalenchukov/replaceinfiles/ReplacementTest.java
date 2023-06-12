@@ -35,7 +35,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link Replacement}.
@@ -76,7 +76,7 @@ public class ReplacementTest
 
 		String actualString = ReplacementTest.readFile();
 
-		assertEquals("string", actualString);
+		assertThat(actualString).isEqualTo("string");
 	}
 
 	/**
@@ -91,7 +91,7 @@ public class ReplacementTest
 
 		String actualString = ReplacementTest.readFile();
 
-		assertEquals(TEMP_FILE_NAME, actualString);
+		assertThat(actualString).isEqualTo(TEMP_FILE_NAME);
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class ReplacementTest
 
 		String actualString = ReplacementTest.readFile();
 
-		assertEquals(tempFile.getPath(), actualString);
+		assertThat(actualString).isEqualTo(tempFile.getPath());
 	}
 
 	private static String readFile() throws IOException

@@ -26,7 +26,7 @@ package dev.kalenchukov.replaceinfiles.resources;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки констант и методов перечисления {@link SpecialRule}.
@@ -45,6 +45,6 @@ public class SpecialRuleTest
 
 		String actualSpecialSign = specialRule.getSpecialSign();
 
-		assertEquals("\\SCFileName", actualSpecialSign);
+		assertThat(actualSpecialSign).isEqualTo("\\SCFileName");
 	}
 }

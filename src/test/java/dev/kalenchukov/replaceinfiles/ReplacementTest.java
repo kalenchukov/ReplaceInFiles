@@ -44,11 +44,11 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ReplacementTest
 {
-	public static final String TEMP_FILE_NAME = "tempFile";
+	private static final String TEMP_FILE_NAME = "tempFile";
 
-	public static File tempFile;
+	private static File tempFile;
 
-	public static Replaceable replacement;
+	private static Replaceable replacement;
 
 	@BeforeAll
 	public static void beforeAll(@TempDir File tempDir)
@@ -69,12 +69,14 @@ public class ReplacementTest
 	 * Проверка метода {@link Replacement#apply(String, String)}.
 	 */
 	@Test
-	public void testReplaceString()
+	public void replaceString() throws IOException
 	{
 		replacement.apply("text", "string")
 				   .replace();
 
-		assertEquals("string", ReplacementTest.readFile());
+		String actualString = ReplacementTest.readFile();
+
+		assertEquals("string", actualString);
 	}
 
 	/**
@@ -82,12 +84,14 @@ public class ReplacementTest
 	 * правилом {@link SpecialRule#FILE_NAME}.
 	 */
 	@Test
-	public void testReplaceSpecialRuleFileName()
+	public void replaceSpecialRuleFileName() throws IOException
 	{
 		replacement.apply("text", SpecialRule.FILE_NAME)
 				   .replace();
 
-		assertEquals(TEMP_FILE_NAME, ReplacementTest.readFile());
+		String actualString = ReplacementTest.readFile();
+
+		assertEquals(TEMP_FILE_NAME, actualString);
 	}
 
 	/**
@@ -95,38 +99,30 @@ public class ReplacementTest
 	 * правилом {@link SpecialRule#PATH}.
 	 */
 	@Test
-	public void testReplaceSpecialRulePath()
+	public void replaceSpecialRulePath() throws IOException
 	{
 		replacement.apply("text", SpecialRule.PATH)
 				   .replace();
 
-		assertEquals(tempFile.getPath(), ReplacementTest.readFile());
+		String actualString = ReplacementTest.readFile();
+
+		assertEquals(tempFile.getPath(), actualString);
 	}
 
-	private static String readFile()
+	private static String readFile() throws IOException
 	{
 		String value;
 		Path path = Paths.get(tempFile.toURI());
 
-		try {
-			value = Files.readAllLines(path, StandardCharsets.UTF_8).get(0);
-		}
-		catch (IOException exception) {
-			throw new RuntimeException(exception);
-		}
+		value = Files.readAllLines(path, StandardCharsets.UTF_8).get(0);
 
 		return value;
 	}
 
-	private static void writeFile(final String value)
+	private static void writeFile(final String value) throws IOException
 	{
 		Path path = Paths.get(tempFile.toURI());
 
-		try {
-			Files.write(path, value.getBytes());
-		}
-		catch (IOException exception) {
-			throw new RuntimeException(exception);
-		}
+		Files.write(path, value.getBytes());
 	}
 }

@@ -41,6 +41,10 @@ public class SpecialRuleTest
 	@Test
 	public void getSpecialSign()
 	{
-		assertEquals("\\SCFileName", SpecialRule.FILE_NAME.getSpecialSign());
+		SpecialRule specialRule = SpecialRule.FILE_NAME;
+
+		String actualSpecialSign = specialRule.getSpecialSign();
+
+		assertEquals("\\SCFileName", actualSpecialSign);
 	}
 }

@@ -153,7 +153,7 @@ public class Replacement implements Replaceable
 	 *
 	 * @param file {@inheritDoc}
 	 * @return {@inheritDoc}
-	 * @throws FileNotFoundException {@inheritDoc}
+	 * @throws FileNotFoundException если файла не существует.
 	 */
 	@NotNull
 	@Override

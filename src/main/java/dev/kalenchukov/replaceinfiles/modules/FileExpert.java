@@ -47,7 +47,7 @@ public class FileExpert implements FileExperts
 	/**
 	 * Распространение действия на скрытые файлы.
 	 */
-	private Boolean canHidden;
+	private boolean canHidden;
 
 	/**
 	 * Локализованные тексты логирования.
@@ -278,8 +278,7 @@ public class FileExpert implements FileExperts
 				}
 			}
 		}
-		catch (Exception exception)
-		{
+		catch (Exception exception) {
 			exception.printStackTrace();
 		}
 

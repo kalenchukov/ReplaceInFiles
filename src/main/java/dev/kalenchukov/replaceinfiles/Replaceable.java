@@ -61,7 +61,7 @@ public interface Replaceable
 	 *
 	 * @param file файл.
 	 * @return ссылку на данный объект.
-	 * @throws FileNotFoundException если файла не существует.
+	 * @throws FileNotFoundException если {@code file} не существует.
 	 */
 	@NotNull
 	Replacement addFile(@NotNull File file) throws FileNotFoundException;

@@ -106,6 +106,7 @@ public class Replacement implements Replaceable
 	 *
 	 * @param locale {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code locale} передан {@code null}.
 	 */
 	@NotNull
 	@Override
@@ -153,6 +154,7 @@ public class Replacement implements Replaceable
 	 *
 	 * @param file {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code file} передан {@code null}.
 	 * @throws FileNotFoundException если {@code file} не существует.
 	 */
 	@NotNull
@@ -189,6 +191,8 @@ public class Replacement implements Replaceable
 	 * @param regexp {@inheritDoc}
 	 * @param replacement {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code regexp} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code replacement} передан {@code null}.
 	 */
 	@NotNull
 	@Override
@@ -214,6 +218,8 @@ public class Replacement implements Replaceable
 	 * @param regexp {@inheritDoc}
 	 * @param specialRule {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code regexp} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code specialRule} передан {@code null}.
 	 */
 	@NotNull
 	@Override

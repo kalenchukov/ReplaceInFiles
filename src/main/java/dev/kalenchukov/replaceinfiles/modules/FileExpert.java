@@ -89,6 +89,7 @@ public class FileExpert implements FileExperts
 	 *
 	 * @param locale {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code locale} передан {@code null}.
 	 */
 	@NotNull
 	@Override
@@ -145,6 +146,8 @@ public class FileExpert implements FileExperts
 	 *
 	 * @param file {@inheritDoc}
 	 * @param value {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code file} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code value} передан {@code null}.
 	 */
 	@Override
 	public void writeFile(@NotNull final File file, @NotNull final String value)
@@ -172,6 +175,7 @@ public class FileExpert implements FileExperts
 	 *
 	 * @param file {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code file} передан {@code null}.
 	 */
 	@Override
 	@NotNull
@@ -214,6 +218,7 @@ public class FileExpert implements FileExperts
 	 *
 	 * @param directory {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code directory} передан {@code null}.
 	 */
 	@Override
 	@NotNull

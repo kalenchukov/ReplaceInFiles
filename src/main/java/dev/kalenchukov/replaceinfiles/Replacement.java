@@ -25,7 +25,7 @@
 package dev.kalenchukov.replaceinfiles;
 
 import dev.kalenchukov.replaceinfiles.modules.FileExpert;
-import dev.kalenchukov.replaceinfiles.resources.SpecialRule;
+import dev.kalenchukov.replaceinfiles.types.SpecialRule;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;

@@ -24,7 +24,7 @@
 
 package dev.kalenchukov.replaceinfiles;
 
-import dev.kalenchukov.replaceinfiles.resources.SpecialRule;
+import dev.kalenchukov.replaceinfiles.types.SpecialRule;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.File;

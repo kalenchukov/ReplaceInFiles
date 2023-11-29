@@ -7,6 +7,6 @@ module dev.kalenchukov.replaceinfiles
 	requires org.apache.logging.log4j;
 
 	exports dev.kalenchukov.replaceinfiles;
-	exports dev.kalenchukov.replaceinfiles.resources;
+	exports dev.kalenchukov.replaceinfiles.types;
 	exports dev.kalenchukov.replaceinfiles.modules;
 }

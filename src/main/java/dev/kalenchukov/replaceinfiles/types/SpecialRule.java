@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.replaceinfiles.resources;
+package dev.kalenchukov.replaceinfiles.types;
 
 import org.jetbrains.annotations.NotNull;
 

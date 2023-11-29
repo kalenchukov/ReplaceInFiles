@@ -24,7 +24,7 @@
 
 package dev.kalenchukov.replaceinfiles;
 
-import dev.kalenchukov.replaceinfiles.resources.SpecialRule;
+import dev.kalenchukov.replaceinfiles.types.SpecialRule;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.io.TempDir;

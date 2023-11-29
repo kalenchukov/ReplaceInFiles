@@ -25,4 +25,4 @@
 /**
  * Предоставляет перечисления, необходимые для определения типов.
  */
-package dev.kalenchukov.replaceinfiles.resources;
+package dev.kalenchukov.replaceinfiles.types;

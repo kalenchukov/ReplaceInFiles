@@ -69,7 +69,7 @@ public class ReplacementTest
 	 * Проверка метода {@link Replacement#apply(String, String)}.
 	 */
 	@Test
-	public void replaceString() throws IOException
+	public void replaceWithString() throws IOException
 	{
 		replacement.apply("text", "string")
 				   .replace();
@@ -84,7 +84,7 @@ public class ReplacementTest
 	 * правилом {@link SpecialRule#FILE_NAME}.
 	 */
 	@Test
-	public void replaceSpecialRuleFileName() throws IOException
+	public void replaceWithSpecialRuleFileName() throws IOException
 	{
 		replacement.apply("text", SpecialRule.FILE_NAME)
 				   .replace();
@@ -99,7 +99,7 @@ public class ReplacementTest
 	 * правилом {@link SpecialRule#PATH}.
 	 */
 	@Test
-	public void replaceSpecialRulePath() throws IOException
+	public void replaceWithSpecialRulePath() throws IOException
 	{
 		replacement.apply("text", SpecialRule.PATH)
 				   .replace();
